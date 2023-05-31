@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: lightyellow;
+}
+
+h1, p {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: 3px solid #393a28;
+    box-shadow: #0f3534 5px 5px 55px 10px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 2rem;
+    background: linear-gradient(#fbc774, #d8ac66);
+}
+
+.calculator > .display {
+    padding: 25px 15px;
+    width: 100%;
+    text-align: right;
+    background: linear-gradient(#e2e4b8, #c7c9b0);
+    border: 2px solid #afb18e;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-style: italic;
+    box-shadow: inset #636451 3px 4px 0px 0px,
+                          inset 5.8px 5.8px 3.6px -11px rgba(0, 0, 0, 0.5),
+                          inset 10px 10px 29px -11px rgba(0, 0, 0, 1);
+    font-size: 3rem;
+
+    overflow-x: auto;
+}
+
+
+.calculator > .keypad {
+    display: flex;
+    width: 100%;
+}
+
+.calculator > .keypad > .numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.calculator > .keypad > .numbers > .keypad-button {
+    width: 22.5%;
+    margin: 1.25%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #e2e4b8;
+    background: radial-gradient(#308685,#186261);
+    border-radius: 10px;
+    border: 2px solid #186261;
+    box-shadow: #0f3534 3px 4px 0px 0px,  
+                          5.8px 5.8px 3.6px -11px rgba(0, 0, 0, 0.5),
+                          10px 10px 29px -11px rgba(0, 0, 0, 1);
+}
+
+.calculator > .keypad > .numbers > .keypad-button.orange {     
+    background: radial-gradient(#f3904d,#fb6701);
+    border: 2px solid #fb6701;
+    box-shadow: #52210025 3px 4px 0px 0px,  
+                          5.8px 5.8px 3.6px -11px rgba(0, 0, 0, 0.5),
+                          10px 10px 29px -11px rgba(0, 0, 0, 1);
+}
+
+.calculator > .keypad > .numbers > .keypad-button:active {        
+    transition: ease .1s;
+    transform: translateY(3px);
+    box-shadow: #00000070 1px 2px 0px 0px,  
+                          5px 5px 15px -11px rgba(0, 0, 0, 1);
+}
+
+.calculator > .keypad > .numbers > .keypad-button.large { 
+    width: 47.5%;
+}
